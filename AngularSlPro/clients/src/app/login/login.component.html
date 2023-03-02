@@ -1,0 +1,12 @@
+<h5><u><i>Register Name</i></u></h5>
+<form class="example-form">
+<mat-form-field class="example-full-width" appearance="fill">
+<mat-label>User Name</mat-label>
+<input matInput placeholder="Enter your name" name="usename"
+[(ngModel)] ="username" id="username" required>
+</mat-form-field>
+
+<button mat-raised-button color="primary" (click)="submit()">Submit</button>
+<span *ngIf="show"> <button [disabled]="show"=false mat-button color="accent">You are logged as current user</button></span>
+
+

@@ -1,0 +1,165 @@
+
+#title {
+    font-size: 60px;
+    text-align: center;
+    border-color: rgb(145, 92, 39);
+    border-width: 15px;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+body {
+    background-color: lightslategrey;
+    background: linear-gradient(to right, lightslategrey, darkslategrey);
+    font-size: 22px;
+}
+
+.fill {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#img1 {
+    border-color: rgb(0, 0, 0);
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+#mainimage {
+    text-align: center;
+}
+
+.menu {
+    background: linear-gradient(to left,rgb(145, 92, 39), rgb(110, 64, 17));
+    color: black;
+}
+
+a:hover, a:active {
+    color: azure;
+}
+
+.imgbar {
+    text-align: center;
+    background-color: black;
+}
+.gif {
+    border-color: rgb(0, 0, 0);
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 10px;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+hr {
+    position: relative;
+    top: 20px;
+    border: none;
+    height: 12px;
+    background: black;
+    margin-bottom: 50px;
+}
+
+.criteria {
+    text-align: left;
+    font-size: 30px;
+}
+
+
+
+#criteria {
+    background-image: url("imgas/blueprint.png");
+    background-repeat: no-repeat;
+    background-position-x: right;
+   
+}
+
+.transbox {
+    margin: 30px;
+    background-color: #ffffff;
+    opacity: 0.6;
+}
+
+.transbox p, ul {
+    font-weight:900;
+}
+
+.gallery {
+    border-style: solid;
+    border-color:black;
+    border-width: 10px;
+    padding: 20px;
+    margin: 20px;
+    background: linear-gradient(to left,rgb(145, 92, 39), rgb(110, 64, 17));
+    overflow: auto;
+    width: auto;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    grid-gap: 50px;
+    justify-items: center;
+    align-items: center;
+}
+
+.galleryimage {
+    border-style: solid;
+    border-width: 10px;
+    border-color: black;
+    padding: 10px;
+    text-align: center;
+}
+
+.imagetitle{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+#img2 {
+border-color: rgb(0, 0, 0);
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 10px;
+}
+.test {
+    border-style: solid;
+    border-color: black;
+    border-width: 10px;
+    border-radius: 10px;
+    text-align: center;
+    background: linear-gradient(to left,rgb(145, 92, 39), rgb(110, 64, 17));
+    color:#ffffff;
+}
+#testi {
+    color:black;
+    text-emphasis-style: bold;
+}
+
+table, tr, th, td, caption {
+    border: 5px solid #eee;
+    font-family: 'Courier New', Courier, monospace;
+    border-collapse: collapse;
+    padding: 0.5rem;
+}
+.meet {
+    text-align: center;
+}
+.obox {
+    color:#eee;
+    background: linear-gradient(to left,rgb(145, 92, 39), rgb(110, 64, 17));
+    text-align: center;
+}
+.message {
+    color:#eee;
+    background: linear-gradient(to left,rgb(145, 92, 39), rgb(110, 64, 17));
+}
+.contact {
+    border-style: solid;
+    border-color: black;
+    border-width: 10px;
+    border-radius: 10px;
+    text-align: center;
+
+}

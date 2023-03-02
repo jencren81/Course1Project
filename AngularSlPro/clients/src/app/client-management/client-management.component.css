@@ -1,0 +1,108 @@
+/* HeroesComponent's private CSS styles */
+#title {
+    font-size: 40px;
+    text-align: center;
+    border-color: #1fa0db;
+    border-width: 15px;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+body {
+    background-color: whitesmoke;
+    
+    font-size: 22px;
+}
+
+.clients {
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    padding: .5em;
+    width: 15em;
+    float: left;
+  }
+  
+  .clients li {
+    display: flex;
+  }
+  
+  .clients button {
+    flex: 1;
+    cursor: pointer;
+    position: relative;
+    left: 0;
+    background-color:  rgb(255, 108, 3);
+    margin: .5em;
+    padding: 0;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    height: 3em;
+
+  }
+  
+  .clients button:hover {
+    background-color:  #1fa0db;
+    left: .1em;
+  }
+  
+  .clients button:active {
+    background-color: #525252;
+    color: black;
+  }
+  
+  .clients button.selected {
+    background-color: black;
+    color: white;
+  }
+  
+  .clients button.selected:hover {
+    background-color: #505050;
+    color: white;
+  }
+  
+  .clients button.selected:active {
+    background-color: black;
+    color: white;
+  }
+  
+  .clients .badge {
+    display: inline-block;
+    font-size: small;
+    color: white;
+    padding: 0.8em 0.7em 0 0.7em;
+    
+    line-height: 1em;
+    margin-right: .8em;
+    border-radius: 4px 0 0 4px;
+  }
+  
+  .clients .name {
+    align-self: center;
+  }
+  .detail {
+    color:#eee;
+    background:  #1fa0db;
+    text-align: center;
+    border: solid;
+    border-bottom: black;
+    margin: .5em;
+    padding: 0;
+    border-radius: 4px;
+  }
+  #form {
+    width: 50%;
+    flex-wrap: wrap;
+    border-radius: 4px;
+    border-color: black;
+    border-style: solid;
+
+  }
+  .form {
+    width: 40%;
+    float: right;
+    margin: .5em;
+    padding: 0;
+    border-radius: 4px;
+    border-color: black;
+  }

@@ -1,0 +1,45 @@
+
+<h1 id="title">Client Meeting Management</h1>
+<div class ="container">
+   
+</div>
+<ul class = "meeting">
+    <h2><u>Select Client</u></h2>
+    <li *ngFor="let meeting of meeting">
+        <button type="button" (click)="onSelected(meeting)"><span class="badge">Customer ID {{meeting.id}} / {{meeting.name}}</span></button>
+    
+    </li>
+</ul>
+
+<full-calendar [options]="calendarOptions"></full-calendar>
+<body>
+<fieldset class="detail">
+    <div *ngIf="selectedId">
+    <h2><strong><u>{{selectedId.name | uppercase}} MEETING DATES AND TIMES</u></strong></h2>
+    
+    <div><span>Customer ID: </span>{{selectedId.id}}</div>
+    <div><span>Meeting One: *LAUNCH* </span>{{selectedId.date1}} / {{selectedId.time1}}</div> 
+    <div><span>Meeting Two: </span>{{selectedId.date2}} / {{selectedId.time2}}</div>
+    <div><span>Meeting Three: </span>{{selectedId.date3}} / {{selectedId.time3}}</div>
+    <div><span>Meeting Four: </span>{{selectedId.date4}} / {{selectedId.time4}}</div> 
+    <div><span>Meeting Five: </span>{{selectedId.date5}} / {{selectedId.time5}}</div> 
+    <div><span>Meeting Six: </span>{{selectedId.date6}} / {{selectedId.time6}}</div> 
+    <div><span>Meeting Seven: </span>{{selectedId.date7}} / {{selectedId.time7}}</div> 
+
+    <p>Select to add meeting dates</p>
+    <div (ngSubmit)="onAddNew()">
+    <input type="text" ngbDatepicker #d="ngbDatepicker"/>
+<button (click)="d.toggle()">Toggle</button>
+<button type="submit" (click)="onAddNew" id="onAddNew" (ngSubmit)="onAddNew()">Add Date</button>
+<br>
+<br>
+</div>
+</div>
+</fieldset>
+
+<hr>
+<footer>
+    &copy; Henna Tech-sync Solutions
+ </footer>
+  
+</body>

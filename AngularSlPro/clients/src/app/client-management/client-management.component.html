@@ -1,0 +1,143 @@
+<header>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</header>
+<body>
+    
+<h1 id="title">Client Management</h1>
+<hr>
+<section class="containerone" style="width: 50%;">
+<h2><u>Select Client</u></h2>
+<ul class = "clients">
+    <li *ngFor="let Client of clients">
+        <button type="button" (click)="onSelected(Client)"><span class="badge">{{Client.name}}</span></button>
+    
+    </li>
+</ul>
+</section>
+<fieldset class="form">
+<section id="form" style="width: 50%;" style=>
+    <form  class="border p-3 rounded-3" #clientForm="ngForm" (ngSubmit)="onSubmit()" novalidate >
+        <div class="row">
+            <div class="col text-center p-2 mb-3 bg-light">
+            <span class="fs-3">Register New Client</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+               <label for="name" class="form-label">Company Name</label>
+               <input type="text" #name="ngModel" [class.is-invalid]="name.invalid && name.touched" class="form-control" name="name" [(ngModel)]="clientModel.name" id="name" required>
+               <small [class.d-none]="name.valid || name.touched">Name is required</small>
+            </div>
+        </div>
+            <div class="col">
+                <label for="ID" class="form-label">ID</label>
+                <input type="number" #id="ngModel" [class.is-invalid]="id.invalid && id.touched" class="form-control" name="ID" [(ngModel)]="clientModel.id" id="id" required>
+                <small [class.d-none]="id.valid || id.touched">ID is required</small>
+            </div>
+            <div class="col">
+                <label for="location" class="form-label">Location</label>
+                <input type="text" #location="ngModel" [class.is-invalid]="location.invalid && location.touched" class="form-control" name="location" [(ngModel)]="clientModel.location" id="location" required>
+                <small [class.d-none]="location.valid || location.touched">Name is required</small>
+            </div>
+            <div class="col ps-3">
+                <div class="m-1">Meeting Option</div>
+                <div class="form-check form-check-inline">
+                    <input type="radio" #meet="ngModel" class="form-check-input" value="m" id="male" name="option1" [(ngModel)]="clientModel.option">
+                    <label class="form-check-label" for="male">Option One</label>
+                </div>
+                </div>
+            <div class="col ps-3">
+                <div class="form-check form-check-inline">
+                    <input type="radio" #meet="ngModel" class="form-check-input" value="f" id="female" name="option2" [(ngModel)]="clientModel.option">
+                    <label class="form-check-label" for="male">Option Two</label>
+                </div>
+                
+                <div class="'col mb-3">
+                    <label for="cost" class="form-label">Cost</label>
+                    <input type="number" #cost="ngModel" class="form-control" name="cost" [(ngModel)]="clientModel.cost" id="cost" required>
+                    <div class="form-text"></div>
+                </div>
+                <div class="'col mb-3">
+                    <label for="build" class="form-label">Build Time</label>
+                    <input type="text" #build="ngModel"  class="form-control" name="build" [(ngModel)]="clientModel.build" id="build" required>
+                    <div class="form-text"></div>
+                </div>
+                <div class="'col mb-3">
+                    <label for="contact" class="form-label">Contact Name</label>
+                    <input type="text" #contact="ngModel"  [class.is-invalid]="contact.invalid && contact.touched" class="form-control" name="contact" [(ngModel)]="clientModel.contact" id="contact" required>
+                    <div class="form-text"></div>
+                    <small [class.d-none]="contact.valid || contact.touched">Contact is required</small>
+                </div>
+            <div class="'col mb-3">
+                <label for="mobile" class="form-label">Phone</label>
+                <input type="number" #phone="ngModel" [class.is-invalid]="phone.invalid && phone.touched"  class="form-control" name="phone" [(ngModel)]="clientModel.phone" id="mobile" required>
+                <div class="form-text"></div>
+                <small [class.d-none]="phone.valid || phone.touched">Phone is required</small>
+            </div>
+                </div>
+                
+              
+                <div class="row">
+                    <div class="col-6 offset-3">
+                        <div class="d-grid">
+                            <button type="submit" (click)="onSubmit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+</section>
+</fieldset>
+
+
+
+<fieldset class="detail">
+<div *ngIf="selectedClients">
+<h2><strong><u>{{selectedClients.name | uppercase}} DETAILS</u></strong></h2>
+
+<div><span>ID: </span>{{selectedClients.id}}</div>
+<div><span>Location: </span>{{selectedClients.location}}</div>
+<div><span>Meeting Option: </span>{{selectedClients.option}}</div>
+<div><span>Cost: </span>{{selectedClients.cost}}</div>
+<div><span>Build: </span>{{selectedClients.build}}</div>
+<div>
+    <label for="">Contact Name/Number: </label>
+    <input type="text" (ngSubmit)="onUpdate()" [(ngModel)]="selectedClients.contact">
+    <input type="number" [(ngModel)]="selectedClients.phone">
+    <br>
+    <button type="button" (click)="onUpdate()">Update</button>
+</div>
+</div>
+
+</fieldset>
+
+
+  
+</body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<footer>
+    &copy; Henna Tech-sync Solutions
+    <a href="url:https://tech-syncsolutions.com/team/henna/"></a>
+    <p>Contact us: henna@sample.com</p>
+    </footer>
+
+
+
+
+
+
+
